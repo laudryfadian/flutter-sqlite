@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sqlite/helpers/database.dart';
 import 'package:sqlite/models/contact.dart';
 import 'package:sqlite/screens/form_contact.dart';
+import 'package:sqlite/screens/list_contact_detail.dart';
 
 class ListContactScreen extends StatefulWidget {
   const ListContactScreen({Key? key}) : super(key: key);
@@ -38,25 +39,34 @@ class _ListContactScreenState extends State<ListContactScreen> {
                 Icons.person,
                 size: 50,
               ),
-              title: Text(contact.name.toString()),
-              subtitle: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8),
-                    child: Text(contact.email.toString()),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8),
-                    child: Text(contact.phone.toString()),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8),
-                    child: Text(contact.company.toString()),
-                  ),
-                ],
+              title: InkWell(
+                child: Text(contact.name.toString()),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              ListContactDetail(detailCon: contact)));
+                },
               ),
+              // subtitle: Column(
+              //   mainAxisAlignment: MainAxisAlignment.start,
+              //   crossAxisAlignment: CrossAxisAlignment.start,
+              //   children: [
+              //     Padding(
+              //       padding: const EdgeInsets.only(top: 8),
+              //       child: Text(contact.email.toString()),
+              //     ),
+              //     Padding(
+              //       padding: const EdgeInsets.only(top: 8),
+              //       child: Text(contact.phone.toString()),
+              //     ),
+              //     Padding(
+              //       padding: const EdgeInsets.only(top: 8),
+              //       child: Text(contact.company.toString()),
+              //     ),
+              //   ],
+              // ),
               trailing: FittedBox(
                 fit: BoxFit.fill,
                 child: Row(
