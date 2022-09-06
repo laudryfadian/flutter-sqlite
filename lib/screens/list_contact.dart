@@ -25,7 +25,7 @@ class _ListContactScreenState extends State<ListContactScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Kontak APP"),
+        title: const Text("Kontak APP"),
         centerTitle: true,
       ),
       body: ListView.builder(
@@ -49,24 +49,6 @@ class _ListContactScreenState extends State<ListContactScreen> {
                               ListContactDetail(detailCon: contact)));
                 },
               ),
-              // subtitle: Column(
-              //   mainAxisAlignment: MainAxisAlignment.start,
-              //   crossAxisAlignment: CrossAxisAlignment.start,
-              //   children: [
-              //     Padding(
-              //       padding: const EdgeInsets.only(top: 8),
-              //       child: Text(contact.email.toString()),
-              //     ),
-              //     Padding(
-              //       padding: const EdgeInsets.only(top: 8),
-              //       child: Text(contact.phone.toString()),
-              //     ),
-              //     Padding(
-              //       padding: const EdgeInsets.only(top: 8),
-              //       child: Text(contact.company.toString()),
-              //     ),
-              //   ],
-              // ),
               trailing: FittedBox(
                 fit: BoxFit.fill,
                 child: Row(
