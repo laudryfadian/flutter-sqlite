@@ -1,16 +1,18 @@
 # sqlite
 
-A new Flutter project.
+## Home Screen
+![](images/1.JPG)
 
-## Getting Started
+## Insert Data Screen
+![](images/5.JPG)
 
-This project is a starting point for a Flutter application.
+## Detail Data Screen
+![](images/2.JPG)
 
-A few resources to get you started if this is your first Flutter project:
+## Edit Data Screen
+![](images/3.JPG)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Dialog Delete
+![](images/4.JPG)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
